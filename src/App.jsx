@@ -1,4 +1,6 @@
-import Header from '../src/components/Header'
+import Header from '../src/components/Header';
+
+
 
 const App = () => {
   return(
@@ -8,4 +10,4 @@ const App = () => {
   )
 }
 
-export default App
+export default App;

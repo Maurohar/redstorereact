@@ -1,8 +1,8 @@
-import LogoMcDonald from '../assets/mcdonald-logo.png';
+import RedStoreArg from '../assets/logo.png';
 
-const Logo = () =>{
+const LogoNavBar = () =>{
     return(
-        <img src={LogoMcDonald} alt="McDonald Argentina" width={120}/>  
+        <img src={RedStoreArg} alt="Red Store Argentina." width={150}/>  
     )
 }
-export default Logo;
+export default LogoNavBar;

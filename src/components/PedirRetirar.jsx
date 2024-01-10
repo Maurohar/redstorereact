@@ -1,6 +1,6 @@
 const PedirRetirar = () =>{
     return(
-        <a className="btn btn-warning" href="#">Pedí y Retirá</a>
+        <a className="btn btn-danger" href="#">Pedí y Retirá</a>
     )
 }
 
