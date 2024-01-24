@@ -9,6 +9,7 @@ const Header = () => {
     const counterStyle = {
         color: 'white', 
     };
+    
     return (
         <div className="container my-3">
             <div className="row">
@@ -20,7 +21,6 @@ const Header = () => {
                 </div>
                 <div className='col-md-2 text-end align-items-center'>
                     <PedirRetirar />
-                    <CartWidget /> 
                 </div>
             </div>
         </div>

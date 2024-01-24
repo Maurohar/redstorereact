@@ -1,11 +1,12 @@
 import React from 'react';
 import LogoCart from '../assets/cart.png';
+import { Link } from 'react-router-dom';
 
 const CartWidget = ({ counter, style }) => {
     return (
-        <a href="#" style={{ background: 'white'}}>
-            <img src={LogoCart} alt="CartShopping" width={30} />
-        </a>
+        <Link to={'/item'} style={{ background: 'white'}}>
+            <img src={LogoCart} alt="CartShopping" className='justify-content-spacebeetwen' width={30} />
+        </Link>
     );
 }
 
