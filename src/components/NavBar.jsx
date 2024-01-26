@@ -6,13 +6,13 @@ const NavBar = () =>{
         <>
         <ul className="nav">
         <li className="nav-item">
-            <NavLink className="nav-link text-dark fs-5" to={"/category"}>Categorias</NavLink>
+            <NavLink className="nav-link text-dark fs-5" to={"/category/men's clothing"}>men's clothing</NavLink>
         </li>
         <li className="nav-item">
-            <NavLink className="nav-link text-dark fs-5" to={"/product"}>Productos</NavLink>
+            <NavLink className="nav-link text-dark fs-5" to={"/category/electronics"}>electronics</NavLink>
         </li>
         <li className="nav-item">
-            <NavLink className="nav-link text-dark fs-5" to={"/category/jewelery"}>Joyeria</NavLink>
+            <NavLink className="nav-link text-dark fs-5" to={"/category/jewelry"}>jewelry</NavLink>
         </li>
         </ul>
         <CartWidget />

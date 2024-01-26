@@ -1,29 +1,29 @@
 import React, { useState, useEffect } from "react";
 import { Link, useParams } from 'react-router-dom';
+import database from '../database.json';
 
 const ItemListContainer = (props) => {
     const [products, setProducts] = useState([]);
     const { id } = useParams(); 
-    console.log(id);
-
 
     useEffect(() => {
-        const fetchData = async () => {
+        const fetchData = () => {
             try {
-                console.log("valor" + id);
-                let URLStore = id ? 'http://fakestoreapi.com/products/category/' +id : 'http://fakestoreapi.com/products/';
-                console.log(URLStore);
-                const response = await fetch(URLStore);
-                const data = await response.json();
+                let filteredProducts = database; // Usa los datos del archivo JSON local
 
-                //meter un filter aca
+                // Filtra los productos por categoría si se proporciona un ID de categoría
+                if (id) {
+                    filteredProducts = database.filter(product => product.category.toLowerCase() === id.toLowerCase());
+                }
 
-                const formattedProducts = data.map(product => ({
+                // Formatea los productos
+                const formattedProducts = filteredProducts.map(product => ({
                     id: product.id,
                     title: product.title,
                     category: product.category,
                     image: product.image,
-                    price: product.price
+                    price: product.price,
+                    description: product.description // Asegúrate de incluir la descripción si la necesitas
                 }));
 
                 setProducts(formattedProducts);

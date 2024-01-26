@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const ItemDetailContainer = ({ id, title, category, image, price  }) => {
     return (
-        <div className="container pb-5 mb-2">
+        <div className="container pb-5 mb-2"> 
 
             <div className="cart-item d-md-flex justify-content-between">
                 <span className="remove-item"><i className="fa fa-times"></i></span>
